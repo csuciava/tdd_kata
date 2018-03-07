@@ -72,6 +72,6 @@ namespace TDD.Test
 
         // 1212,ijigf,13,132        ijigf =0
         // 11,,1,1
-        //
+        // -3, 3, 7 -> 10
     }
 }
