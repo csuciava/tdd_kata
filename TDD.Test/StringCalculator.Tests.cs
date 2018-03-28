@@ -70,9 +70,48 @@ namespace TDD.Test
             Assert.AreEqual(result, 57);
         }
 
+        [TestMethod]
+        public void StringCalculator_WithLetters_SubstituteWithZero()
+        {
+            //Arrange
+            var str = " 12,ijigf,13,132";
+
+            //Act
+            int result = _calculator.Sum(str);
+
+            //Assert
+            Assert.AreEqual(result, 157);
+        }
+
+        [TestMethod]
+        public void StringCalculator_NegativNumbers_SubstituteWithZero()
+        {
+            //Arrange
+            var str = "-3,3,7";
+
+            //Act
+            int result = _calculator.Sum(str);
+
+            //Assert 
+            Assert.AreEqual(result, 10);
+        }
+
+        [TestMethod]
+        public void StringCalculator_AllowNewLine_SubstituteWithZero()
+        {
+            //Given
+            var str = "1\n2,3";
+
+            //When
+            int result = _calculator.Sum(str);
+
+            //Then 
+            Assert.AreEqual(result, 6);
+        }
+
         // 1212,ijigf,13,132        ijigf =0
-        // 11,,1,1
+        // 11,,1,1  facut
         // -3, 3, 7 -> 10
-       // http://osherove.com/tdd-kata-1/
+        // http://osherove.com/tdd-kata-1/
     }
 }

@@ -12,7 +12,9 @@ namespace TDD.Test
             {
                 var number = 0;
                 if (int.TryParse(strNumber, out number))
-                    result += number;
+                {
+                    if (number > 0) result += number;
+                }
             }
 
             return result;
